@@ -1,0 +1,3 @@
+base.url=www.loginpage.com
+login.url=${base.url}/login
+home.url=${base.url}/home
