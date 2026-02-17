@@ -10,9 +10,9 @@ public class ConfigFileReader {
     private ConfigFileReader instance;
     private Properties properties;
 
-    private ConfigFileReader() throws IOException {
+    public ConfigFileReader() throws IOException {
         properties = System.getProperties();
-        properties.load(new FileInputStream("src/test/resources/config/config.properties"));
+        properties.load(new FileInputStream("src/test/resources/config"));
     }
 
 
@@ -29,5 +29,14 @@ public class ConfigFileReader {
 
     public String getLoginUrl() {
         return properties.getProperty("login.url", getBaseUrl() + "/login");  // fallback
+    }
+
+    public String getUsername() {
+        return properties.getProperty("username" );  // fallback
+    }
+
+
+    public String getPassword() {
+        return properties.getProperty("password" );  // fallback
     }
 }
