@@ -71,7 +71,7 @@
         <version>3.5.4</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>  <!-- Or src/test/resources -->
+            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>  <!-- Or src/test/resources -->
           </suiteXmlFiles>
           <parallel>methods</parallel>  <!-- Parallel: classes|methods|tests -->
           <threadCount>4</threadCount>
