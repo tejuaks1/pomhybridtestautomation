@@ -9,6 +9,7 @@ pipeline {
     }
     post {
         always {
+          junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
             publishHTML([allowMissing: true,  // Allow missing dir
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
